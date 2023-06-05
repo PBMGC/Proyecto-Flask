@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{%from "render_elements.html" import input_text,input_submit%}
+{% block body %}
+<div class="add">
+    <h1>Comentar</h1>
+    <div class="add-form">
+        <form action="/add" method="POST">
+            <div class="campo-add">
+                <label for="comentario">Comentario</label>
+                <textarea name="comentario" id="" cols="30" rows="4"></textarea>
+            </div>
+            <div class="campo-add">
+                <label for="anonimo">Anonimo?</label>
+                {{input_text("anonimo","","checkbox")}}
+            </div>
+            <input type="hidden" name="id" value='{{session["id"]}}'>
+            <div class="boton-registro"> 
+                {{input_submit("Comentar")}}
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

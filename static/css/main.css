@@ -1,0 +1,265 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+  font-family: 'Geologica', sans-serif;
+}
+
+
+/* titulo */
+.Titulo{
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* navegacion */
+.div-navegacion{
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.navegacion a{
+    text-decoration: none;
+    color: black;
+    background-color: rgb(40,227,82);
+    border-radius: 15px;
+    padding: 6px;
+}
+
+.navegacion a:hover{
+  background-color: black;
+  color: white;
+}
+
+/* red */
+.usuario{
+  text-align: center;
+}
+
+.usuario-img{
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  width: 10%;
+}
+.comentario {
+  width: calc(33.33% - 20px); /* Ajusta el ancho según tu preferencia y el espacio entre los comentarios */
+  margin-bottom: 20px;
+  float: left; /* Agregamos float para alinear los comentarios en filas */
+  margin-top: 20px;
+  margin-left: 20px;
+}
+  
+.comentario blockquote {
+  border: 1px solid rgb(40,227,82);
+  padding: 10px;
+  background-color: #050505;
+  color: rgb(40,227,82);
+  border-radius: 10px;
+}
+  
+.comentario .cm {
+  text-align: center;
+  font-size: 25px;
+}
+  
+.comentario .footer-comentario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  color: #d8d3d3;
+}
+  
+.comentar {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(40,227,82);
+  color: #030303;
+  border: none;
+  border-radius: 50%; /* Establece un valor del 50% para lograr la forma de círculo */
+  text-align: center;
+  font-size: 48px;
+  line-height: 60px;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* login */
+.login{
+  background-image: linear-gradient(180deg, #b0ffc0 0, #9cffc2 12.5%, #81ffc2 25%, #5dfabf 37.5%, #0cedba 50%, #00dfb6 62.5%, #00d5b6 75%, #00cdba 87.5%, #00c7c0 100%);
+  padding: 5%;
+  align-items: center;
+  text-align: center;
+}  
+
+.login h1{
+  font-size: 60px;
+  margin-top: -50px;
+}
+
+.login-form{
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color: black;
+  padding: 3.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  margin-bottom: 80px;
+  box-shadow: 4px 6px 5px 4px  rgb(40,227,82);
+  color:  rgb(40,227,82);
+}
+
+.campo{
+  align-items: center;
+  margin-top: 20px;
+}
+
+.campo label{
+  font-size: 25px;
+}
+
+.campo input{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgb(40,227,82);
+  border: none;
+  border-radius: 5px;
+  color: black;
+  overflow: hidden;
+}
+
+.boton-login input{
+  overflow: hidden;
+  margin-top: 30px;
+  background-color:  rgb(40,227,82);
+  margin: none;
+  cursor: pointer;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  text-transform: uppercase;
+  padding-right: 40px;
+}
+
+.boton-login input:hover{
+  background-color: black;
+  color:  rgb(40,227,82);
+}
+
+.registrar{
+  text-decoration: none;
+  color: whitesmoke;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.registrar:hover{
+  color:  rgb(40,227,82);
+  text-decoration: underline;
+}
+
+/* registro */
+.registro{
+  text-align: center;
+  background-image: radial-gradient(circle at 0% 0%, #0094ff 0, #0090ff 5.56%, #008bff 11.11%, #0086ff 16.67%, #0080ff 22.22%, #4979ff 27.78%, #7471fa 33.33%, #9268f0 38.89%, #aa5fe5 44.44%, #be55d8 50%, #ce4bca 55.56%, #db40bb 61.11%, #e636ab 66.67%, #ee2d9a 72.22%, #f3288a 77.78%, #f62679 83.33%, #f72968 88.89%, #f63058 94.44%, #f33948 100%);;
+  padding: 1.7%;
+}
+
+.registro h1{
+  font-size: 40px;
+}
+
+.register-form{
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color:  rgb(40,227,82);
+  padding: 3.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  margin-bottom: 80px;
+  box-shadow: 4px 6px 5px 4px  rgb(0, 0, 0);
+  color:  rgb(7, 7, 7);
+}
+
+.campo-registro input{
+  overflow: hidden;
+  color:  rgb(40,227,82);
+  background-color:  black;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  padding-right: 40px;
+}
+
+.boton-registro input{
+  background-color: black;
+  color: rgb(40,227,82);
+  border: none;
+  margin-top: 20px;
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.boton-registro input:hover{
+  background-color: rgb(248, 250, 248);
+  color: black;
+}
+
+/* add */
+.add{
+  text-align: center;
+  background-image: linear-gradient(180deg, #ff81bb 0, #ff77c1 10%, #fb6ec7 20%, #ea65cd 30%, #d65cd3 40%, #be55d8 50%, #a150dd 60%, #7c4fe3 70%, #4850e8 80%, #0052ed 90%, #0054f0 100%);
+  padding: 5%;
+}
+
+.add h1{
+  font-size: 40px;
+}
+
+.add-form{
+  max-width: 400px;
+  margin: 2rem auto;
+  background-color:  rgb(40,227,82);
+  padding: 3.5rem;
+  border-radius: 2rem;
+  text-align: center;
+  margin-bottom: 80px;
+  box-shadow: 4px 6px 5px 4px  rgb(0, 0, 0);
+  color:  rgb(7, 7, 7);
+}
+
+.campo-add{
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin: none;
+}

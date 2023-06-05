@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{%from "render_elements.html" import input_text,input_submit%}
+{%block body%}
+<div class="perfil">
+    <img src="/static/imgs/gtao.jpg" alt="">
+    <h1>{{session["usuario"]}}</h1>
+
+    <div class="comentarios-recientes">
+        <h2>Comentarios Recientes</h2>
+        {%for datoN in datosN%}
+            <div class="comentario">
+                <blockquote>
+                    <div class="cm">
+                        <p>{{datoN.0}}</p>
+                    </div>
+                    <footer class="footer-comentario">
+                        {% if datoN.2 == "si" %}
+                            <p>Anonimo</p>
+                        {%else%}
+                            <p>{{session["usuario"]}}</p>
+                        {% endif %}
+                        <p>{{datoN.1}}</p>
+                    </footer>
+                </blockquote>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="comentarios-totales">
+        <h2>Comentarios Totales</h2>
+        <table>
+            <thead>
+                <tr>
+                    <td>comentario</td>
+                    <td>fecha</td>
+                    <td>anonimo</td>
+                </tr>
+            </thead>
+        </table>
+        <tbody>
+            {%for datoT in datosT%}
+                <tr>
+                    <td>{{datoT.0}}</td>
+                    <td>{{datoT.2}}</td>
+                    <td>{{datoT.1}}</td>
+                    <td>
+                        <a href="/eliminar/{{datoT.3}}">eliminar</a>
+                    </td>
+                </tr>
+
+            {% endfor %}
+        </tbody>
+    </div>
+
+</div>
+
+{%endblock%}

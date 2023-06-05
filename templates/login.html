@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{%from "render_elements.html" import input_text,input_submit%}
+{% block body %}
+<div class="login">
+    <h1>Login</h1>
+    <div class="login-form">
+        <form action="/login" method="POST">
+            <div class="campo">
+                <label for="usuario">Usuario</label>
+                {{input_text("usuario","Username")}}
+            </div>
+            <div class="campo">
+                <label for="contraseña">Contraseña</label>
+                {{input_text("contraseña","123","password")}}
+            </div>
+            <div class="boton-login">
+                {{input_submit("Login")}}
+            </div>
+
+            <a class="registrar" href="/redireccion/1">No Tienes Cuenta?</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

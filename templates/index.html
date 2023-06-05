@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{%block body%}
+
+<header>
+    <h1 class="Titulo">Book</h1>
+</header>
+
+<div class="div-navegacion">
+    <nav class="navegacion">
+        {%if session["usuario"] %}
+            <a href="/logout">Cerrar Sesion</a>
+        {%else%}
+            <a href="/redireccion/3">Iniciar Sesion</a>
+            <a href="/redireccion/1">Registrar</a>
+        {%endif%}
+    </nav>
+</div>
+
+{% if session["usuario"] %}
+    <a href="/usuario">
+        <img class="usuario-img" src="/static/imgs/gtao.jpg" alt="">
+    </a>
+    <h1 class="usuario">Hola {{session["usuario"]}}</h1>
+{% endif %}
+
+<div class="red">
+    {%for dato in datos%}
+        <div class="comentario">
+            <blockquote>
+                <div class="cm">
+                    <p>{{dato.0}}</p>
+                </div>
+                <footer class="footer-comentario">
+                    {% if dato.2 == "si" %}
+                        <p>Anonimo</p>
+                    {%else%}
+                        <p>{{dato.3}}</p>
+                    {% endif %}
+                    <p>{{dato.1}}</p>
+                </footer>
+            </blockquote>
+        </div>
+    {% endfor %}
+    {%if session["usuario"]%}
+        <a class="comentar" href="/redireccion/4">+</a>
+    {%endif%}
+</div>
+
+
+
+{%endblock%}

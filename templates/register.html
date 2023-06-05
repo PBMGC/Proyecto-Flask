@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%from "render_elements.html" import input_text,input_submit%}
+{% block body %}
+<div class="registro">
+    <h1>Registro</h1>
+    <div class="register-form">
+        <form action="/register" method="POST">
+            <div class="campo-registro">
+                <label for="usuario">Usuario</label>
+                {{input_text("usuario","Username")}}
+            </div>
+            <div class="campo-registro">
+                <label for="email">Correo</label>
+                {{input_text("email","Username@username.com","email")}}
+            </div>
+            <div class="campo-registro">
+                <label for="contraseña">Contraseña</label>
+                {{input_text("contraseña","123","password")}}
+            </div>
+            <div class="boton-registro">
+                {{input_submit("Registrar")}}
+            </div>
+        </form>
+    </div>    
+</div>
+{% endblock %}

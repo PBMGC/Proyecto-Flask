@@ -1,0 +1,7 @@
+{% macro input_text(name,placeholder="",type="text") %}
+<input type="{{type}}" name="{{name}}" placeholder="{{placeholder}}">
+{% endmacro %}
+
+{% macro input_submit(value,type="submit")%}
+    <input type="{{type}}" value="{{value}}">
+{% endmacro %}
